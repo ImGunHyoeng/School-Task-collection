@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head><title>나만의 GOTY</title>
+<style>
+a{
+text-decoration:none;
+}
+iframe
+{
+border: 5px dotted black;
+}
+.background
+{
+width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.background::after
+{
+width: 100%;
+  height: 100%;
+  content: "";
+background:url("pattern.png");
+ position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.4;
+}
+@keyframes totalc
+{
+0%{color:blue;}
+30%{color:green;}
+100%{color:red;}
+}
+@keyframes rainbow 
+{
+    0%   {color: red; }
+    10%   {color: orange; }
+    23%  {color: yellow; }
+    36%  {color: yellowgreen; }
+    49%  {color: green; }
+    62%   {color: blue; }
+    74%  {color: indigo; }
+    86%   {color: purple; }
+    100% {color: red; }
+}
+table
+{
+border-collapse:collapse;
+}
+thead{
+background:darkgray;
+color:yellow;
+}
+td
+{
+border-right:3px solid gold;
+}
+th{
+padding:10px;
+text-shadow: 4px 4px 3px black;
+}
+
+#final
+{
+font:bold 20px arial;
+ animation-name:rainbow;
+animation-duration:5s;
+animation-iteration-count:infinite;
+}
+#Game{
+width:100px;
+height:100px;
+}
+tbody tr:nth-child(odd)
+{
+background:#B0E0E6;
+}
+#Gametext{
+font: bold 15px arial;
+}
+#total_s
+{
+font:bold 18px arial;
+animation-name:totalc;
+animation-duration:3s;
+animation-iteration-count:infinite;
+}
+#total_s:hover{
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="background">
+<h1>나만의 GOTY</h1>
+<hr>
+<h2>목차</h2>
+<ol>
+<a href="#first"><li>GOTY란 무엇인가, 주제선발 이유</li></a>
+<a href="#two"><li>GOTY의 선발기준</li></a>
+<a href="#three"><li>GOTY의 후보작</li></a>
+<a href="#four"><li>최종 GOTY</li></a>
+</ol>
+<br><br>
+<h2 id="first">GOTY란 무엇인가, 주제선발 이유</h2>
+<hr>
+자 GOTY란 무엇인가에 대해서 알아볼텐데요. GOTY란 것은 줄임말으로써  Game of the year을 줄인말로 올해의 게임상으로
+연말에 드라마,영화 시상식을 하듯이 올해 가장 잘만든 게임을 투표를 통해서 결정하는 것입니다.
+제가 과제로 이 주제를 선택한 이유는 이제 곧 연말이라서 시상식의 계절이기도 하고 게임을 좋아해서 한번 선택했습니다.
+밑에 링크를 타면 나무위키로 더 자세한 설명을 볼수 있습니다.<br>
+<a href="https://namu.wiki/w/Game%20of%20the%20Year">출처:나무위키</a>
+<h2 id="two">GOTY의 선발기준</h2>
+<table>
+<caption><strong>GOTY 선발 예시 표</strong></caption>
+<thead>
+<tr><th>이름 및 장르</th><th>평가기준</th><th>총점</th></tr>
+</thead>
+<tbody>
+<tr><td id="Gametext"><div><a href="https://www.minecraft.net/ko-kr" title="해당 사이트로 이동합니다."><img id="Game" src="minecraft.jpeg" alt="예시 게임"></a></div>게임이름 :마인크래프트 <br>장르:샌드박스,서바이벌</td>
+<td>
+<form>
+<ul>
+<li>해당장르에 대한 재미가 잘 표현 되어있는가?<br>
+<input type="text" placeholder="간단하게 작성">
+<li>게임만의 독특성<br>
+<input type="text" placeholder="간단하게 작성">
+<li>플레이한 시간<br>
+<input type="text" placeholder="간단하게 작성">
+<li>재미<br>
+<input type="text" placeholder="간단하게 작성">
+</ul>
+</form>
+</td>
+<td id="total_s">4.3/5.0</td></tr>
+</tbody>
+</table>
+(선발되는 게임 목록들은 제가 올해안에 했던 게임을 위주로 선발했습니다.)
+<hr>
+<h2 id="three">GOTY의 후보작</h2>
+<iframe src="candidate.html" width="100%" height="400px"></iframe>
+<h2 id="four">최종 GOTY</h2>
+<div id="final">GOTY는 총점과 개인적인 선호를 통해서 하나의 작품을 선정하였습니다.</div>
+<details>
+<summary><strong>최종 GOTY</strong></summary>
+<iframe src="final.html" width="100%" height="400px"></iframe>
+</details>
+</div>
+</body>
+</html> 
